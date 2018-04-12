@@ -169,8 +169,8 @@ namespace MySQL_Processing
 				while (sqlReader.Read())
 				{
 					order[0] = sqlReader[0].ToString();
-					order[6] = sqlReader[6].ToString();
-					order[10] = sqlReader[10].ToString();
+					order[1] = sqlReader[6].ToString();
+					order[2] = sqlReader[10].ToString();
 				}
 				if (deliv_address != "")
 					order[6] = deliv_address;
@@ -179,8 +179,8 @@ namespace MySQL_Processing
 					order[10] = track_number;
 
 				MySqlCommand editUser = new MySqlCommand("UPDATE orders SET DelivAddress=@DelivAddress, TrackNumb=@TrackNumb WHERE idOrders=@idOrders", MySQlConnection);
-				editUser.Parameters.AddWithValue("DelivAddress", order[6]);
-				editUser.Parameters.AddWithValue("TrackNumb", order[10]);
+				editUser.Parameters.AddWithValue("DelivAddress", order[1]);
+				editUser.Parameters.AddWithValue("TrackNumb", order[2]);
 				editUser.Parameters.AddWithValue("idOrders", order[0]);
 				editUser.ExecuteNonQuery();
 				MySQlConnection.Close();
