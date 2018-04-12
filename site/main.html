@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Главная | БолтоПечать</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="window">
+			<div id="header">
+				<div id="logo"><img src="logo.png"></div>
+				<nav id="menu">
+					<li id="dropdown">
+						<a>Личный кабинет</a>
+						<div id="dropdown-content">
+							<a href="#login">Авторизация</a>
+							<a href="#register">Регистрация</a>
+						</div>
+					</li>
+					<li><a href="/checkorder">Состояние заказа</a></li>
+					<li><a href="/order">Оформить заказ</a></li>
+					<li><a href="/">Главная</a></li>
+				</nav>
+				<!--<nav id="menu-lite">
+					smthg
+				</nav>-->
+			</div>
+			<div id="ad-box">
+				Контент
+			</div>
+			<div id="body">
+				<section>
+					<h1>Буквально вчера мы создали сервис для реализации ваших идей - БолтоПечать.</h1>
+					<p>За это время поняли простую истину, которая определила нашу глобальную цель:</p>
+					<blockquote>Заказчик не должен разбираться в технологиях и материалах, его мало интересует процесс создания.<br>Заказчику нужен результат.</blockquote>
+					<p>С этой мыслью мы облегчили процесс заказа.</p>
+					<p>Все, что от вас требуется – загрузить картинку, файл с 3D объектом или описать свою идею дизайнеру. Наши специалисты подберут технологию и материалы, рассчитают стоимость и сроки изготовления.</p>
+				</section>
+				<hr>
+				<section>
+					<h1>Мы беремся за разработку таких вещей как:</h1>
+					<center><div id="materials">
+						<div class="mat-box">
+							<img src="1.png">
+							<h3>Программное обеспечение</h3>
+						</div>
+						<div class="mat-box">
+							<img src="2.png">
+							<h3>3D/2D - печать объектов и форм</h3>
+						</div>
+						<div class="mat-box">
+							<img src="3.png">
+							<h3>Аппаратное обеспечение</h3>
+						</div>
+					</div></center>
+				</section>
+			</div>
+			<div id="footer">
+				&copy; Кривые ручки Corp., 2018
+			</div>
+		</div>
+		<div id="popup1" class="popup-window">
+			<div class="popup">
+				<a class="close-popup">&times;</a>
+				<h1>Авторизация</h1>
+				<div><label for="login">Логин:</label><input id="login" type="text" required></div>
+				<div><label for="password">Пароль:</label><input id="password" type="password" minlength="6" required></div>
+				<div style="float: left;">Забыли пароль?</div>
+				<div style="float: right;"><input type="submit" value="Войти"></div>
+			</div>
+		</div>
+		<div id="popup2" class="popup-window">
+			<div class="popup">
+				<a class="close-popup">&times;</a>
+				<h1>Регистрация</h1>
+				<div><label for="login">Ваш E-mail:</label><input id="login" type="text" required></div>
+				<div><label for="password">Пароль:</label><input id="password" type="password" minlength="6" required></div>
+				<div><label for="password">Повторите пароль:</label><input id="password" type="password" minlength="6" required></div>
+				<div><label for="password">Номер телефона:</label><input id="password" type="password" minlength="6" required></div>
+				<div><input type="submit" value="Зарегестрироваться"></div>
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
