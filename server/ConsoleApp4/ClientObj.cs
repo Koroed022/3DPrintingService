@@ -9,6 +9,7 @@ namespace Server
 {
     class ClientObj
     {
+		MySQLProc ClientQuery;
         protected internal string Id { get; private set; }
         protected internal NetworkStream Stream { get; private set; }
         string userName;
@@ -45,20 +46,16 @@ namespace Server
                 Close();
             }
         }
-        private Reply ProcessRequest(dynamic stuff)
+        private ReplyUser ProcessRequest(dynamic stuff)
         {
-            Reply Ans=new Reply();//Обьект класса для возврата ответа от бд(с данными и ошибками внутри)
-            switch (stuff.command)
+            ReplyUser Ans=new ReplyUser();//Обьект класса для возврата ответа от бд(с данными и ошибками внутри)
+			MySQLProc keks = new MySQLProc(Ans);
+			switch (stuff.command)
             {
-                case "Login"://login
+                case "Id"://login
                     {
-                        String login = stuff.Login;
-                        String Passw = stuff.Pass;
-                        ///Запрос к бд
-                        Ans.error = 0;
-                        Ans.UserId = "";
+						keks.ReturnUsersID();
                         return Ans;
-
                     }
 
                 case "Registration"://Регистрация
@@ -67,9 +64,12 @@ namespace Server
                         String Passw = stuff.Pass;
                         String Tel = stuff.Tel;
                         String Fio = stuff.FIO;
-                        //Запрос к БД
+
+						//Запрос к БД
+						keks.Registration();
+						
                         Ans.error = 0;
-                        Ans.UserId = "";
+                        Ans.idUsers = "";
                         return Ans;
 
                     }
