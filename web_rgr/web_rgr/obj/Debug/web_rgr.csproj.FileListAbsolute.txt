@@ -1,0 +1,6 @@
+c:\users\dmitrii\documents\visual studio 2013\Projects\web_rgr\web_rgr\bin\web_rgr.dll.config
+c:\users\dmitrii\documents\visual studio 2013\Projects\web_rgr\web_rgr\bin\web_rgr.dll
+c:\users\dmitrii\documents\visual studio 2013\Projects\web_rgr\web_rgr\bin\web_rgr.pdb
+c:\users\dmitrii\documents\visual studio 2013\Projects\web_rgr\web_rgr\obj\Debug\web_rgr.csprojResolveAssemblyReference.cache
+c:\users\dmitrii\documents\visual studio 2013\Projects\web_rgr\web_rgr\obj\Debug\web_rgr.dll
+c:\users\dmitrii\documents\visual studio 2013\Projects\web_rgr\web_rgr\obj\Debug\web_rgr.pdb

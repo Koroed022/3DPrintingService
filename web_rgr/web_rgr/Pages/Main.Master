@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="web_rgr.Pages.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Главная | БолтоПечать</title>
+	<link rel="stylesheet" href="~/Content/style.css" />
+	<link rel="icon" type="image/x-icon" href="~/Content/favicon.ico" />
+</head>
+<body>
+	<form id="window" runat="server">
+		<div id="header">
+			<div id="logo"><img src="../Content/img/logo.png"/></div>
+			<nav id="menu">
+				<li id="dropdown">
+					<a>Личный кабинет</a>
+					<div id="dropdown-content">
+						<a href="#login">Авторизация</a>
+						<a href="#register">Регистрация</a>
+					</div>
+				</li>
+				<li><a href="/checkorder">Состояние заказа</a></li>
+				<li><a href="/order">Оформить заказ</a></li>
+				<li><a href="/">Главная</a></li>
+			</nav>
+			<!--<nav id="menu-lite">
+				smthg
+			</nav>-->
+		</div>
+		<div id="ad-box">
+			Контент
+		</div>
+		<div id="body">
+			<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+		</div>
+		<div id="footer">
+			&copy; Кривые ручки Corp., 2018
+		</div>
+		<div id="popup1" class="popup-window">
+			<div class="popup">
+				<a class="close-popup">&times;</a>
+				<h1>Авторизация</h1>
+				<div><label for="log_login">Логин:</label><asp:TextBox id="log_login" runat="server"></asp:TextBox></div>
+				<div><label for="log_pass">Пароль:</label><asp:TextBox id="log_pass" runat="server"></asp:TextBox></div>
+				<div style="float: left;">Забыли пароль?</div>
+				<div style="float: right;"><asp:Button id="log_send" Text="Войти" runat="server" OnClick="Login"></asp:Button></div>
+			</div>
+		</div>
+		<div id="popup2" class="popup-window">
+			<div class="popup">
+				<a class="close-popup">&times;</a>
+				<h1>Регистрация</h1>
+				<div><label for="reg_email">Ваш E-mail:</label><asp:TextBox id="reg_email" runat="server"></asp:TextBox></div>
+				<div><label for="reg_pass">Пароль:</label><asp:TextBox id="reg_pass" runat="server"></asp:TextBox></div>
+				<div><label for="reg_rep_pass">Повторите пароль:</label><asp:TextBox id="reg_rep_pass" runat="server"></asp:TextBox></div>
+				<div><label for="reg_num">Номер телефона:</label><asp:TextBox id="reg_num" runat="server"></asp:TextBox></div>
+				<div style="float: right;"><asp:Button id="reg_send" Text="Зарегистрироваться" runat="server"></asp:Button></div>
+			</div>
+		</div>
+		<script src="../Content/main.js"></script>
+	</form>
+</body>
+</html>
